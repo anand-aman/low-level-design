@@ -1,12 +1,10 @@
-package parkinglot;
-
-import parkinglot.vehicle.Vehicle;
+package com.lld.parkinglot;
 
 public class ParkingSpot {
     private int id;
     private boolean isEmpty;
-    private Vehicle vehicle;
     private int price;
+    private Vehicle vehicle;
 
     public ParkingSpot() {
 
