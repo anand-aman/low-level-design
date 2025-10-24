@@ -1,5 +1,6 @@
 package com.lld.parkinglot;
 
+import com.lld.parkinglot.entities.Vehicle;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -11,12 +12,12 @@ public class ParkingSpot {
     private int price;
     private Vehicle parkedVehicle;
 
-    public void parkVehicle(Vehicle vehicle) {
+    public void occupySpot(Vehicle vehicle) {
         parkedVehicle = vehicle;
         isAvailable = false;
     }
 
-    public void unparkVehicle() {
+    public void releaseSpot() {
         parkedVehicle = null;
         isAvailable = true;
     }

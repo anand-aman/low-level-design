@@ -11,6 +11,7 @@
 
     <modules>
         <module>parking-lot</module>
+        <module>parking-lot-improved</module>
     </modules>
 
     <name>Low Level Design</name>

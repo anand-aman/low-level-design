@@ -42,6 +42,6 @@ public class ParkingLotManager {
     }
 
     public void unparkVehicle(ParkingSpot parkingSpot, Vehicle vehicle) {
-        parkingSpot.unparkVehicle(vehicle);
+        parkingSpot.unparkVehicle();
     }
 }
