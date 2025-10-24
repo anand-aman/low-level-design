@@ -1,5 +1,6 @@
 package com.lld.parkinglot;
 
+import com.lld.parkinglot.entities.ParkingSpot;
 import com.lld.parkinglot.entities.PaymentStatus;
 import com.lld.parkinglot.entities.Ticket;
 import com.lld.parkinglot.entities.Vehicle;

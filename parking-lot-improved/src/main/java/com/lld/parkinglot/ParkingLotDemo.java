@@ -1,9 +1,6 @@
 package com.lld.parkinglot;
 
-import com.lld.parkinglot.entities.PaymentStatus;
-import com.lld.parkinglot.entities.Ticket;
-import com.lld.parkinglot.entities.Vehicle;
-import com.lld.parkinglot.entities.VehicleType;
+import com.lld.parkinglot.entities.*;
 
 import java.util.List;
 

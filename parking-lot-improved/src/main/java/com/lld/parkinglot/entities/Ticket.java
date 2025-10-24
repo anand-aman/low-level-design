@@ -1,6 +1,5 @@
 package com.lld.parkinglot.entities;
 
-import com.lld.parkinglot.ParkingSpot;
 import lombok.Builder;
 import lombok.Getter;
 
