@@ -15,8 +15,7 @@ public class ParkingLotDemo {
         ParkingSpot spot3 = ParkingSpot.builder().id(3).isAvailable(true).price(20).build();
         List<ParkingSpot> parkingSpotList = List.of(spot1, spot2, spot3);
 
-        ParkingLot parkingLot = new ParkingLot(parkingSpotList);
-        ParkingLotManager parkingLotManager = new ParkingLotManager(parkingLot);
+        ParkingLotManager parkingLotManager = new ParkingLotManager(parkingSpotList);
 
         EntranceGate entranceGate = new EntranceGate(parkingLotManager);
         ExitGate exitGate = new ExitGate(parkingLotManager);

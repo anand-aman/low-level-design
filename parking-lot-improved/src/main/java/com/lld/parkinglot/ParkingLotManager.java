@@ -9,25 +9,36 @@ import lombok.Setter;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
 public class ParkingLotManager {
 
-    private ParkingLot parkingLot;
+    private List<ParkingSpot> parkingSpotList;
+
+    public void addSpot(ParkingSpot spot) {
+        parkingSpotList.add(spot);
+    }
+
+    public void removeSpot(ParkingSpot spot) {
+        parkingSpotList.remove(spot);
+    }
 
     public ParkingSpot findAvailableSpot(Vehicle vehicle) {
-        return parkingLot.findAvailableSpot(vehicle);
+        return parkingSpotList.stream()
+                .filter(ParkingSpot::isAvailable)
+                .findFirst()
+                .map(parkingSpot -> {
+                    System.out.println("Available spot for vehicle " + vehicle.getLicenseNumber() + " is Spot ID: " + parkingSpot.getId());
+                    return parkingSpot;
+                })
+                .orElse(null);
     }
 
     public Ticket bookSpot(Vehicle vehicle, ParkingSpot spot) {
-        spot.occupySpot(vehicle);
         return issueTicket(vehicle, spot);
-    }
-
-    public void releaseSpot(Ticket ticket) {
-        ticket.getParkingSpot().releaseSpot();
     }
 
     private Ticket issueTicket(Vehicle vehicle, ParkingSpot parkingSpot) {
