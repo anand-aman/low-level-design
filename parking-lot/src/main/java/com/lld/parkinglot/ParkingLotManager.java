@@ -15,11 +15,11 @@ public class ParkingLotManager {
     private List<ParkingSpot> parkingSpotList;
 
     public void addParkingSpot(ParkingSpot spot) {
-
+        parkingSpotList.add(spot);
     }
 
     public void removeParkingSpot(ParkingSpot spot) {
-
+        parkingSpotList.remove(spot);
     }
 
     public ParkingSpot findAvailableParkingSpot(Vehicle vehicle) {
@@ -37,11 +37,11 @@ public class ParkingLotManager {
                 .build();
     }
 
-    public void parkVehicle(Vehicle vehicle) {
-
+    public void parkVehicle(ParkingSpot parkingSpot, Vehicle vehicle) {
+        parkingSpot.parkVehicle(vehicle);
     }
 
-    public void unParkVehicle(Vehicle vehicle) {
-
+    public void unparkVehicle(ParkingSpot parkingSpot, Vehicle vehicle) {
+        parkingSpot.unparkVehicle(vehicle);
     }
 }
