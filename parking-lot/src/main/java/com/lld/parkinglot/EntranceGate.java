@@ -3,16 +3,12 @@ package com.lld.parkinglot;
 public class EntranceGate {
     private ParkingLotManager parkingLotManager;
 
-    public Ticket issueTicket(Vehicle vehicle) {
-
+    public ParkingSpot findAvailableParkingSpot(Vehicle vehicle) {
+        return parkingLotManager.findAvailableParkingSpot(vehicle);
     }
 
-    private ParkingSpot findAvailableParkingSpot(Vehicle vehicle) {
-
-    }
-
-    private ParkingSpot bookParkingSpot(Vehicle vehicle) {
-
+    public Ticket bookParkingSpot(Vehicle vehicle, ParkingSpot parkingSpot) {
+        return parkingLotManager.issueTicket(vehicle, parkingSpot);
     }
 
 

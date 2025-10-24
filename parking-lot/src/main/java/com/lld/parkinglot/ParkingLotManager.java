@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Getter
@@ -21,8 +22,19 @@ public class ParkingLotManager {
 
     }
 
-    public ParkingSpot findAvailableParkingSpot() {
-        return parkingSpotList.getFirst();
+    public ParkingSpot findAvailableParkingSpot(Vehicle vehicle) {
+        return parkingSpotList.stream()
+                .filter(ParkingSpot::isAvailable)
+                .findFirst()
+                .orElse(null);
+    }
+
+    public Ticket issueTicket(Vehicle vehicle, ParkingSpot parkingSpot) {
+        return Ticket.builder()
+                .parkingSpot(parkingSpot)
+                .vehicle(vehicle)
+                .entryTime(LocalDateTime.now())
+                .build();
     }
 
     public void parkVehicle(Vehicle vehicle) {

@@ -1,22 +1,25 @@
 package com.lld.parkinglot;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class ParkingSpot {
     private int id;
-    private boolean isEmpty;
+    private boolean isAvailable;
     private int price;
     private Vehicle vehicle;
 
-    public ParkingSpot() {
-
-    }
-
     public void parkVehicle(Vehicle v) {
         vehicle = v;
-        isEmpty = false;
+        isAvailable = false;
     }
 
     public void unparkVehicle(Vehicle vehicle) {
         vehicle = null;
-        isEmpty = true;
+        isAvailable = true;
     }
 }
