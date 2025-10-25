@@ -10,6 +10,7 @@ public class ExitGate {
 
     public PaymentStatus processExit(Ticket ticket) {
         double parkingFee = manager.calculateParkingFee(ticket);
+        System.out.println("Total Parking Fee: " + parkingFee);
         PaymentStatus paymentStatus = manager.processPayment(ticket, parkingFee);
 
         if (PaymentStatus.SUCCESS.equals(paymentStatus)) {

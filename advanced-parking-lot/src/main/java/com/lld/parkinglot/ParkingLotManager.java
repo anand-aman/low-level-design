@@ -4,6 +4,7 @@ import com.lld.parkinglot.entities.ParkingSpot;
 import com.lld.parkinglot.entities.PaymentStatus;
 import com.lld.parkinglot.entities.Ticket;
 import com.lld.parkinglot.entities.Vehicle;
+import com.lld.parkinglot.strategy.ParkingStrategy;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,15 +28,8 @@ public class ParkingLotManager {
         parkingSpotList.remove(spot);
     }
 
-    public ParkingSpot findAvailableSpot(Vehicle vehicle) {
-        return parkingSpotList.stream()
-                .filter(ParkingSpot::isAvailable)
-                .findFirst()
-                .map(parkingSpot -> {
-                    System.out.println("Available spot for vehicle " + vehicle.getLicenseNumber() + " is Spot ID: " + parkingSpot.getId());
-                    return parkingSpot;
-                })
-                .orElse(null);
+    public ParkingSpot findAvailableSpot(Vehicle vehicle, ParkingStrategy strategy) {
+        return strategy.findSpot(parkingSpotList, vehicle.getVehicleType());
     }
 
     public Ticket bookSpot(Vehicle vehicle, ParkingSpot spot) {
