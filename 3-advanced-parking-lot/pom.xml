@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>advanced-parking-lot</artifactId>
+    <artifactId>3-advanced-parking-lot</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

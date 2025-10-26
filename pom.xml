@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>parking-lot</module>
-        <module>parking-lot-improved</module>
-        <module>advanced-parking-lot</module>
+        <module>1-parking-lot</module>
+        <module>2-parking-lot-improved</module>
+        <module>3-advanced-parking-lot</module>
     </modules>
 
     <name>Low Level Design</name>
