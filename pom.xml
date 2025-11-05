@@ -13,6 +13,7 @@
         <module>1-parking-lot</module>
         <module>2-parking-lot-improved</module>
         <module>3-advanced-parking-lot</module>
+        <module>4-tic-tac-toe</module>
     </modules>
 
     <name>Low Level Design</name>
