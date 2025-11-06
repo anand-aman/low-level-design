@@ -1,0 +1,15 @@
+package com.lld.tictactoe.model;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+public class Player {
+    private String name;
+    private PlayingPiece playingPiece;
+
+    public Player(String name, PlayingPiece playingPiece) {
+        this.name = name;
+        this.playingPiece = playingPiece;
+    }
+}
