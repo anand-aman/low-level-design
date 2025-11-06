@@ -1,7 +1,8 @@
-package com.lld.tictactoe;
+package com.lld.tictactoe.model;
 
-import lombok.RequiredArgsConstructor;
+import lombok.Getter;
 
+@Getter
 public class PlayingPiece {
     private PieceType pieceType;
 

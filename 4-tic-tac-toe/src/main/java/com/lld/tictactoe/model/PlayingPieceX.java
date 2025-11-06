@@ -1,4 +1,4 @@
-package com.lld.tictactoe;
+package com.lld.tictactoe.model;
 
 public class PlayingPieceX extends PlayingPiece {
     public PlayingPieceX() {
