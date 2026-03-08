@@ -1,4 +1,4 @@
-package com.lld.model;
+package com.lld.bookmyshow.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

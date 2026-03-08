@@ -1,9 +1,9 @@
-package com.lld.controller;
+package com.lld.bookmyshow.controller;
 
-import com.lld.model.Booking;
-import com.lld.model.Seat;
-import com.lld.model.Show;
-import com.lld.service.BookingService;
+import com.lld.bookmyshow.model.Booking;
+import com.lld.bookmyshow.model.Seat;
+import com.lld.bookmyshow.model.Show;
+import com.lld.bookmyshow.service.BookingService;
 
 import java.util.List;
 

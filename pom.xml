@@ -15,6 +15,7 @@
         <module>3-advanced-parking-lot</module>
         <module>4-tic-tac-toe</module>
         <module>5-book-my-show</module>
+        <module>6-games</module>
     </modules>
 
     <name>Low Level Design</name>

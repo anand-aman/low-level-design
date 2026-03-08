@@ -1,4 +1,4 @@
-package com.lld.model;
+package com.lld.bookmyshow.model;
 
 public enum SeatType {
     SILVER, GOLD, PLATINUM

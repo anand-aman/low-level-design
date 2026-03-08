@@ -1,7 +1,7 @@
-package com.lld.service;
+package com.lld.bookmyshow.service;
 
-import com.lld.model.Location;
-import com.lld.model.Theatre;
+import com.lld.bookmyshow.model.Location;
+import com.lld.bookmyshow.model.Theatre;
 
 import java.util.List;
 import java.util.Map;

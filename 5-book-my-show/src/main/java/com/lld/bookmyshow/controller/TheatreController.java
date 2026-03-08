@@ -1,10 +1,10 @@
-package com.lld.controller;
+package com.lld.bookmyshow.controller;
 
-import com.lld.model.Location;
-import com.lld.model.Movie;
-import com.lld.model.Show;
-import com.lld.model.Theatre;
-import com.lld.service.TheatreService;
+import com.lld.bookmyshow.model.Location;
+import com.lld.bookmyshow.model.Movie;
+import com.lld.bookmyshow.model.Show;
+import com.lld.bookmyshow.model.Theatre;
+import com.lld.bookmyshow.service.TheatreService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
