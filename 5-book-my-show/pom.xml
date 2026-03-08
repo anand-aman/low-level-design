@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>4-tic-tac-toe</artifactId>
+    <artifactId>5-book-my-show</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
