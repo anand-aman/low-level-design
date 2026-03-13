@@ -1,8 +1,10 @@
 package com.lld.games;
 
-import com.lld.games.model.Player;
+import com.lld.games.model.GameState;
+import com.lld.games.model.Move;
 
 public interface Board {
-    boolean isWinner(Player player, int row, int col);
-
+    void display();
+    GameState makeMove(Move move);
+    boolean isWinner(Move move);
 }
