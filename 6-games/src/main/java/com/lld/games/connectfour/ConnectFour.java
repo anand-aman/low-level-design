@@ -21,8 +21,7 @@ public class ConnectFour implements Game {
         initializeGame();
     }
 
-    @Override
-    public void initializeGame() {
+    private void initializeGame() {
         scanner = new Scanner(System.in);
         int[] boardSize = takeBoardSizeInput();
         board = new Connect4Board(boardSize[0], boardSize[1]);
@@ -60,6 +59,19 @@ public class ConnectFour implements Game {
         return new Move(currentPlayer, -1, col);
     }
 
+    private int[] takeBoardSizeInput() {
+        System.out.println("Enter the size of the game board: ");
+        System.out.print("Enter Row Size: ");
+        int rowSize = scanner.nextInt();
+        System.out.print("Enter Column Size: ");
+        int colSize = scanner.nextInt();
+        if(rowSize<4 || colSize<4){
+            System.out.println("Invalid Board Size. Retry.");
+            return takeBoardSizeInput();
+        }
+        return new int[] {rowSize, colSize};
+    }
+
     private void takePlayerInput(){
         for (int i = 1; i <= 2; i++) {
             System.out.print("Enter the name of Player " + i + ": ");
@@ -82,19 +94,5 @@ public class ConnectFour implements Game {
             return takeSymbolInput(i);
         }
         return pieceType;
-    }
-
-    @Override
-    public int[] takeBoardSizeInput() {
-        System.out.println("Enter the size of the game board: ");
-        System.out.print("Enter Row Size: ");
-        int rowSize = scanner.nextInt();
-        System.out.print("Enter Column Size: ");
-        int colSize = scanner.nextInt();
-        if(rowSize<4 || colSize<4){
-            System.out.println("Invalid Board Size. Retry.");
-            return takeBoardSizeInput();
-        }
-        return new int[] {rowSize, colSize};
     }
 }

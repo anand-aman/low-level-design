@@ -5,7 +5,6 @@ import com.lld.games.ConsolePrinter;
 import com.lld.games.Display;
 import com.lld.games.model.GameState;
 import com.lld.games.model.Move;
-import com.lld.games.model.Player;
 import com.lld.games.model.PlayingPiece;
 
 public class Connect4Board implements Board {
@@ -37,6 +36,28 @@ public class Connect4Board implements Board {
         return GameState.IN_PROGRESS;
     }
 
+    @Override
+    public boolean isWinner(Move move) {
+        int[][] directions = new int[][] {
+                {0, 1},
+                {1, 0},
+                {1, 1},
+                {-1, 1}
+        };
+
+        for(int[] dir : directions){
+            int count=1;
+            //count in direction
+            count += countInDirection(move, dir[0], dir[1]);
+            //count in anti direction
+            count += countInDirection(move, -dir[0], -dir[1]);
+            if(count>=4){
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean isValidMove(Move move) {
         if(move.getCol()>=grid[0].length) {
             display.displayMessage("Invalid move. Please select valid column.");
@@ -62,28 +83,6 @@ public class Connect4Board implements Board {
                 return;
             }
         }
-    }
-
-    @Override
-    public boolean isWinner(Move move) {
-        int[][] directions = new int[][] {
-                {0, 1},
-                {1, 0},
-                {1, 1},
-                {-1, 1}
-        };
-
-        for(int[] dir : directions){
-            int count=1;
-            //count in direction
-            count += countInDirection(move, dir[0], dir[1]);
-            //count in anti direction
-            count += countInDirection(move, -dir[0], -dir[1]);
-            if(count>=4){
-                return true;
-            }
-        }
-        return false;
     }
 
     private int countInDirection(Move move, int rowDirection, int columnDirection) {
