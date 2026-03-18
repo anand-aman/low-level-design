@@ -18,7 +18,7 @@ public class ConsolePrinter implements Display{
             }
             if (i != grid.length-1){
                 System.out.println();
-                for(int k=0; k<grid.length; k++){
+                for(int k=0; k<grid[0].length; k++){
                     System.out.print("---  ");
                 }
                 System.out.println();

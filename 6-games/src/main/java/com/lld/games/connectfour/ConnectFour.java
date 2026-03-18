@@ -40,11 +40,12 @@ public class ConnectFour implements Game {
                 gameState = GameState.IN_PROGRESS;
                 continue;
             }
+            board.display();
             if (gameState==GameState.WON) {
                 System.out.println("Player " + currentPlayer.getName() + " wins");
+                return;
             }
             currentPlayer = player1 == currentPlayer ? player2 : player1;
-            board.display();
         }
         if (gameState == GameState.DRAW) {
             System.out.println("Match Draw!");
