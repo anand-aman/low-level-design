@@ -16,6 +16,7 @@
         <module>4-tic-tac-toe</module>
         <module>5-book-my-show</module>
         <module>6-games</module>
+        <module>7-elevator</module>
     </modules>
 
     <name>Low Level Design</name>
