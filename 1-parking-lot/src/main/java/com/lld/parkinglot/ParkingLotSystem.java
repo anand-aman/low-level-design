@@ -1,5 +1,9 @@
 package com.lld.parkinglot;
 
+import com.lld.parkinglot.model.Ticket;
+import com.lld.parkinglot.model.Vehicle;
+import com.lld.parkinglot.model.VehicleType;
+
 import java.util.List;
 
 public class ParkingLotSystem {

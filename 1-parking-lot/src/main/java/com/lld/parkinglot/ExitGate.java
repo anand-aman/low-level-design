@@ -1,5 +1,6 @@
 package com.lld.parkinglot;
 
+import com.lld.parkinglot.model.Ticket;
 import lombok.AllArgsConstructor;
 
 import java.time.Duration;

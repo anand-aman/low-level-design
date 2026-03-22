@@ -1,5 +1,7 @@
 package com.lld.parkinglot;
 
+import com.lld.parkinglot.model.Ticket;
+import com.lld.parkinglot.model.Vehicle;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

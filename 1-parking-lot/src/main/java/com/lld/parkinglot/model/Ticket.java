@@ -1,6 +1,6 @@
-package com.lld.parkinglot;
+package com.lld.parkinglot.model;
 
-import lombok.AllArgsConstructor;
+import com.lld.parkinglot.ParkingSpot;
 import lombok.Builder;
 import lombok.Getter;
 
