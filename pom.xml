@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>0-design-patterns</module>
         <module>1-parking-lot</module>
         <module>2-parking-lot-improved</module>
         <module>3-advanced-parking-lot</module>
@@ -17,6 +18,7 @@
         <module>5-book-my-show</module>
         <module>6-games</module>
         <module>7-elevator</module>
+        <module>8-file-system</module>
     </modules>
 
     <name>Low Level Design</name>
