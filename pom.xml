@@ -17,6 +17,7 @@
         <module>5-book-my-show</module>
         <module>6-games</module>
         <module>7-elevator</module>
+        <module>8-file-system</module>
     </modules>
 
     <name>Low Level Design</name>
