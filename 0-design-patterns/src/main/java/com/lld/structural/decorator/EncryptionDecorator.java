@@ -1,7 +1,6 @@
 package com.lld.structural.decorator;
 
-import javax.xml.crypto.Data;
-
+// It simulates encryption by wrapping the string with markers. Not real encryption.
 public class EncryptionDecorator implements DataSource{
 
     private DataSource wrapped;

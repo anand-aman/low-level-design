@@ -1,5 +1,6 @@
 package com.lld.structural.decorator;
 
+// It simulates compression by wrapping the string with markers. Not real compression.
 public class CompressionDecorator implements DataSource{
 
     private DataSource wrapped;
