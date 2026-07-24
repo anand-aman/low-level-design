@@ -3,6 +3,15 @@ package com.lld.behavioral.observer.inventory;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Simple Inventory store that manages quantities and emits InventoryEvent
+ * transitions (IN_STOCK / OUT_OF_STOCK) to the Subject. Note: events do
+ * not contain numeric quantities — observers only learn the item and the
+ * type of state transition.
+ *
+ * For learning purposes the Inventory directly constructs events when the
+ * stock crosses the zero boundary (0 -> >0 = IN_STOCK, >0 -> 0 = OUT_OF_STOCK).
+ */
 public class Inventory {
    private final Subject subject;
    private final Map<String, Integer> inventory;
@@ -23,6 +32,12 @@ public class Inventory {
        if (currentQuantity > 0) {
            this.inventory.put(item, currentQuantity - 1);
            System.out.println(item + " has been sold.");
+
+           // Notify managers if item goes out of stock
+           if (currentQuantity - 1 == 0) {
+               InventoryEvent event = new InventoryEvent(item, InventoryEvent.EventType.OUT_OF_STOCK);
+               subject.notifyObservers(event);
+           }
        } else {
            System.out.println(item + " is out of stock.");
        }
@@ -37,8 +52,10 @@ public class Inventory {
        int previousQuantity = this.inventory.get(item);
        this.inventory.put(item, previousQuantity + quantity);
 
+       // Notify customers if item comes back in stock
        if (previousQuantity == 0) {
-           subject.notifyObservers(item, item +" is back in stock!");
+           InventoryEvent event = new InventoryEvent(item, InventoryEvent.EventType.IN_STOCK);
+           subject.notifyObservers(event);
        }
    }
 
